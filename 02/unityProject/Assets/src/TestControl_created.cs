@@ -51,6 +51,61 @@ public partial class TestControl : StateManager {
         }
         if (!HasNextState())
         {
+            SetNextState(S_0002);
+        }
+        if (HasNextState())
+        {
+            GoNextState();
+        }
+    }
+    /*
+        S_0002
+        new state
+    */
+    void S_0002(bool bFirst)
+    {
+        if (bFirst)
+        {
+            set_0or1();
+        }
+        br_0(S_0003);
+        br_1(S_0004);
+        if (HasNextState())
+        {
+            GoNextState();
+        }
+    }
+    /*
+        S_0003
+        new state
+    */
+    void S_0003(bool bFirst)
+    {
+        if (bFirst)
+        {
+            create_sphere();
+        }
+        if (!HasNextState())
+        {
+            SetNextState(S_END);
+        }
+        if (HasNextState())
+        {
+            GoNextState();
+        }
+    }
+    /*
+        S_0004
+        new state
+    */
+    void S_0004(bool bFirst)
+    {
+        if (bFirst)
+        {
+            create_cylinder();
+        }
+        if (!HasNextState())
+        {
             SetNextState(S_END);
         }
         if (HasNextState())
