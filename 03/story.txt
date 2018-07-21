@@ -1,0 +1,37 @@
+チュートリアル０２の続き
+
+step1
+
+出現したオブジェクトを移動させることする。
+
+移動用のステート(S_MOVE)を作成
+
+step2
+
+先に移動用の関数を作成する。
+- 生成したのを m_objとして保存
+- コルーチンを使いたいので TestCompo.Vを作成
+- move_start(Vector3 goal, float time), IEnumrator move_start_coを作成
+- 必要に応じて、using...を追加していく
+
+step3
+
+Excelの列に
+x
+y
+z
+t
+を追加。 移動先と時間の意味
+
+step4
+
+template-functionの修正
+
+step5
+エディタで値を入れる
+
+step6
+
+実行
+
+
