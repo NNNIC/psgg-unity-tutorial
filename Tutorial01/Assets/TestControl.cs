@@ -71,10 +71,10 @@ public partial class TestControl : MonoBehaviour {
 	#region    // [SYN-G-GEN OUTPUT START] indent(8) $/./$
 //  psggConverterLib.dll converted from TestControl.xlsx. 
         /*
-            S_0001
+            S_CREATE_CUBE
             キューブ作成
         */
-        void S_0001(bool bFirst)
+        void S_CREATE_CUBE(bool bFirst)
         {
             if (bFirst)
             {
@@ -110,7 +110,7 @@ public partial class TestControl : MonoBehaviour {
             //
             if (!HasNextState())
             {
-                SetNextState(S_0001);
+                SetNextState(S_CREATE_CUBE);
             }
             //
             if (HasNextState())
