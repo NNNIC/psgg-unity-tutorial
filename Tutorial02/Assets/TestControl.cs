@@ -71,6 +71,51 @@ public partial class TestControl : MonoBehaviour {
 	#region    // [SYN-G-GEN OUTPUT START] indent(8) $/./$
 //  psggConverterLib.dll converted from TestControl.xlsx. 
         /*
+            E_DEFOBJ
+        */
+        GameObject m_obj;
+        /*
+            S_BRANCH
+            分岐する
+        */
+        void S_BRANCH(bool bFirst)
+        {
+            int x = 0;
+            if (bFirst)
+            {
+                x = UnityEngine.Random.Range(0,2);
+            }
+            // branch
+            if (x==0) { SetNextState( S_CREATE_SPHERE ); }
+            else { SetNextState( S_CREATE_CYLINDER ); }
+            //
+            if (HasNextState())
+            {
+                GoNextState();
+            }
+        }
+        /*
+            S_CHANGEPOS
+            位置変更
+        */
+        void S_CHANGEPOS(bool bFirst)
+        {
+            if (bFirst)
+            {
+                m_obj.transform.localPosition = Vector3.up;
+            }
+            //
+            if (!HasNextState())
+            {
+                SetNextState(S_END);
+            }
+            //
+            if (HasNextState())
+            {
+                GoNextState();
+            }
+        }
+        /*
             S_CREATE_CUBE
             キューブ作成
         */
@@ -83,7 +128,49 @@ public partial class TestControl : MonoBehaviour {
             //
             if (!HasNextState())
             {
-                SetNextState(S_END);
+                SetNextState(S_BRANCH);
+            }
+            //
+            if (HasNextState())
+            {
+                GoNextState();
+            }
+        }
+        /*
+            S_CREATE_CYLINDER
+            シリンダー作成
+        */
+        void S_CREATE_CYLINDER(bool bFirst)
+        {
+            if (bFirst)
+            {
+                m_obj=GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+            }
+            //
+            if (!HasNextState())
+            {
+                SetNextState(S_CHANGEPOS);
+            }
+            //
+            if (HasNextState())
+            {
+                GoNextState();
+            }
+        }
+        /*
+            S_CREATE_SPHERE
+            スフィア作成
+        */
+        void S_CREATE_SPHERE(bool bFirst)
+        {
+            if (bFirst)
+            {
+                m_obj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            }
+            //
+            if (!HasNextState())
+            {
+                SetNextState(S_CHANGEPOS);
             }
             //
             if (HasNextState())
