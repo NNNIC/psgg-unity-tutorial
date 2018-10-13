@@ -34,3 +34,6 @@ http://syn-g-gen.com
 
 ![](https://raw.githubusercontent.com/NNNIC/psgg-unity-tutorial/master/wiki/tuto3.png)
 
+## #3 Result
+
+![](https://raw.githubusercontent.com/NNNIC/psgg-unity-tutorial/master/wiki/tuto3.gif)
