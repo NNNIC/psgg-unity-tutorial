@@ -1,14 +1,14 @@
 # psgg-unity-tutorial
 
-SYN-G-GEN UNITY TUTORIAL
+StateGo UNITY TUTORIAL
 
-# What is SYN-G-GEN
+# What is StateGo
 
 This is a visual programming tool for many kind of programming languages. You can create a state-chart and write program simultaneously.
 
 # Download
 
-http://syn-g-gen.com
+https://statego.programanic.com
 
 # Simple Instraction in chart
 
