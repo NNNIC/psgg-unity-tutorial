@@ -8,7 +8,7 @@ This is a visual programming tool for many kind of programming languages. You ca
 
 # Download
 
-https://statego.programanic.com
+[StateGo](https://statego.programanic.com/index-e.html)
 
 # Simple Instraction in chart
 
