@@ -1,0 +1,2 @@
+Use from StateGo beta10. 
+2020.6.20
